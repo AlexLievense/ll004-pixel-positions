@@ -10,7 +10,7 @@
     </div>
 
     <div>
-        <div>
+        <div class="space-x-1">
             <x-tag>Tag</x-tag>
             <x-tag>Tag</x-tag>
             <x-tag>Tag</x-tag>
