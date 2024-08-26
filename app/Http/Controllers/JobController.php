@@ -14,8 +14,13 @@ class JobController extends Controller
      */
     public function index()
     {
+        $jobs = Job::all()->load('employer', 'tags');
+
+        $featuredJobs = $jobs->where('featured');
+
         return view('jobs.index', [
-            'jobs' => Job::all(),
+            'jobs' => $jobs,
+            'featuredJobs' => $featuredJobs,
             'tags' => Tag::all(),
         ]);
     }
